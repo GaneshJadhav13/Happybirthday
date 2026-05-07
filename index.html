@@ -374,7 +374,17 @@ function showWish(){
     },7000);
 }
 
+
+document.body.addEventListener("click", function () {
+
+    document.getElementById("bgMusic").play();
+
+}, { once:true });
 </script>
 
+
+<audio id="bgMusic" autoplay loop>
+    <source src="love1.mp3" type="audio/mp3">
+</audio>
 </body>
 </html>
