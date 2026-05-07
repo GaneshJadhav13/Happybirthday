@@ -375,16 +375,23 @@ function showWish(){
 }
 
 
-document.body.addEventListener("click", function () {
+window.addEventListener("load", () => {
 
-    document.getElementById("bgMusic").play();
+    const music = document.getElementById("bgMusic");
 
-}, { once:true });
+    music.muted = false;
+
+    music.play();
+
+});
+
 </script>
 
 
-<audio id="bgMusic" autoplay loop>
+    <audio id="bgMusic" autoplay loop muted>
     <source src="love1.mp3" type="audio/mp3">
+</audio>
+
 </audio>
 </body>
 </html>
