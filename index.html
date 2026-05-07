@@ -374,24 +374,19 @@ function showWish(){
     },7000);
 }
 
+window.addEventListener("touchstart", startMusic, { once: true });
+window.addEventListener("click", startMusic, { once: true });
 
-window.addEventListener("load", () => {
+function startMusic() {
 
-    const music = document.getElementById("bgMusic");
+    document.getElementById("bgMusic").play();
 
-    music.muted = false;
-
-    music.play();
-
-});
-
+}
 </script>
 
-
-    <audio id="bgMusic" autoplay loop muted>
+<audio id="bgMusic" loop>
     <source src="love1.mp3" type="audio/mp3">
 </audio>
 
-</audio>
 </body>
 </html>
